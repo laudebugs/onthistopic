@@ -1,0 +1,1114 @@
+/* 
+    Reset css
+
+    
+    http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #050a30;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Declare font familes
+---------------------*/
+@font-face {
+  font-family: "Woodland Bold";
+  src: url("./fonts/woodland/PPWoodland-Bold.otf");
+}
+@font-face {
+  font-family: "Woodland Light";
+  src: url("./fonts/woodland/PPWoodland-Ultralight.otf");
+}
+@font-face {
+  font-family: "Sunborn";
+  src: url("./fonts/Sunborn/Sunborn-SansOne.otf");
+}
+@font-face {
+  font-family: "Glacial Indifference";
+  src: url("./fonts/glacial-indifference/GlacialIndifference-Regular.otf");
+}
+@font-face {
+  font-family: "Whirly Bats";
+  src: url("./fonts/WhirlyBats/Whirlybats.ttf");
+}
+/* General settings
+-----------------------*/
+body {
+  color: #050a30;
+  background-color: #d9d9d9;
+  font-family: "Glacial Indifference";
+}
+h2 {
+  font-family: "Woodland Bold";
+  font-weight: 300;
+  font-size: 200%;
+}
+
+/* Header 
+-----------*/
+div.header {
+  padding: 2% 2.5% 2% 2.5%;
+  top: 0;
+  /* position: -webkit-sticky;
+  position: sticky;
+  top: 0; */
+}
+div.siteIcon {
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+}
+.siteIcon img {
+  width: 35%;
+}
+div.siteTtl {
+  font-family: "Sunborn";
+  font-size: 200%;
+  text-align: center;
+  width: 40%;
+  display: inline-block;
+  color: #050a30;
+}
+div.accountIcons {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  font-family: "Whirly Bats";
+  font-size: 200%;
+  font-weight: 500;
+  text-align: right;
+  letter-spacing: 12px;
+}
+div.accountIcons div {
+  width: 50px;
+  display: inline-block;
+  /* margin: 0 3% 0 4%; */
+  padding: 0 2.5% 0 2.5%;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: text-top;
+}
+div.accountIcons div svg text {
+  font-size: 300px;
+  fill: #050a30;
+}
+div.accountIcons div:hover {
+  cursor: pointer;
+}
+div.accountIcons div svg text:hover:not(.usr) {
+  fill: #0292b7;
+}
+.usr circle {
+  fill: #a6a6a6;
+}
+.usr text:hover {
+  fill: #0292b7;
+}
+/* User Menu*/
+div.userMenu {
+  position: fixed;
+  right: 2.5%;
+  font-family: "Woodland Light";
+  font-size: 175%;
+  font-weight: 550;
+  line-height: 200%;
+  width: 250px;
+  text-align: center;
+  /* border: 50px; */
+  top: 100px;
+  position: fixed;
+  background-color: #8fcbdb;
+  border-radius: 10px;
+  display: none;
+}
+div.userMenu p:hover {
+  text-shadow: #a6a6a6 2px 2px 2px;
+  cursor: pointer;
+}
+
+/* Menu bar
+-------------*/
+div.menuBar {
+  font-family: "Woodland Bold";
+  font-size: 150%;
+  font-weight: 300;
+  margin: 0 5% 0 5%;
+  padding-bottom: 1%;
+  /* width: 80%; */
+  border-bottom: #050a30 1.25pt solid;
+}
+.menuBar h3 {
+  display: inline-block;
+  width: 16%;
+  text-align: left;
+}
+h3.editorschoicelink {
+  text-emphasis: center;
+}
+h3.bloglink {
+  text-align: center;
+}
+div.menuButton svg line {
+  stroke: #050a30;
+}
+/* div.menuButton svg line:hover {
+  stroke: #0292b7;
+} */
+/* Audio Player
+--------------*/
+div.player {
+  background-color: #a6a6a6;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  display: "";
+  vertical-align: middle;
+  font-size: 125%;
+  line-height: 125%;
+
+  left: 0;
+}
+
+div.podArt {
+  width: 15%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  height: 60px;
+  /* border: #0292b7 solid 1px; */
+}
+div.nowPlaying {
+  width: 100%;
+  /* padding: 2%; */
+  display: inline-block;
+  padding: 2% 0 2% 0;
+  height: 100%;
+}
+div.nowPlaying p {
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+}
+div.podArt img {
+  width: 50px;
+  vertical-align: middle;
+}
+div.playingTtl {
+  width: 40%;
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  /* padding: 0 1% 0 1%; */
+}
+
+div.icon {
+  width: 4.5%;
+  padding: 0.5%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+div.icon > svg {
+  width: 35px;
+  stroke: none;
+  fill-rule: nonzero;
+  fill: #050a30;
+  fill-opacity: 1;
+}
+div.icon > svg:hover {
+  cursor: pointer;
+}
+#like {
+  stroke: #050a30;
+  stroke-width: 12px;
+  fill: none;
+}
+#conversation {
+  stroke: #050a30;
+  stroke-width: 14px;
+  fill: none;
+}
+#convo {
+  stroke: none;
+  fill-rule: nonzero;
+  fill: #050a30;
+  fill-opacity: 1;
+  font-size: 325px;
+}
+#volumeBar {
+  text-align: center;
+  width: 3.5%;
+  position: fixed;
+  margin: 0;
+  bottom: -110px;
+  background-color: #a6a6a6;
+  padding: 1% 0 1% 0.4%;
+}
+@keyframes showVBar {
+  from {
+    bottom: -110px;
+  }
+  to {
+    bottom: 80px;
+  }
+}
+@-moz-keyframes showVbar {
+  from {
+    bottom: -110px;
+  }
+  to {
+    bottom: 80px;
+  }
+}
+@-webkit-keyframes showVBar {
+  from {
+    bottom: -110px;
+  }
+  to {
+    bottom: 80px;
+  }
+}
+@keyframes hideVBar {
+  from {
+    bottom: 80px;
+  }
+  to {
+    bottom: -110px;
+  }
+}
+@-moz-keyframes hideVbar {
+  from {
+    bottom: 80px;
+  }
+  to {
+    bottom: -110px;
+  }
+}
+@-webkit-keyframes hideVBar {
+  from {
+    bottom: -80px;
+  }
+  to {
+    bottom: -110px;
+  }
+}
+
+#volumeBase {
+  stroke: #0292b7;
+  fill: #0292b7;
+}
+#volumeLevel {
+  stroke: #050a30;
+  fill: #050a30;
+}
+.icon img {
+  width: 50px;
+}
+.icon img:hover {
+  cursor: pointer;
+}
+div.progressBar {
+  width: 100%;
+  display: inline-block;
+  position: fixed;
+  bottom: 65px;
+}
+div.controls {
+  padding: 0.5% 0 0.5% 0;
+}
+.hideBar {
+  display: none;
+}
+#timeline {
+  /* padding: 2.5% 0 2.5% 0; */
+  display: inline-block;
+  /* border: 1px solid black; */
+  cursor: pointer;
+}
+/* Carousel on Homepage
+-----------------------*/
+div.carousel {
+  padding: 0 2.5% 0 2.5%;
+  height: 300px;
+}
+div.carouselImage {
+  width: 15%;
+  display: inline-block;
+  padding: 2.5%;
+}
+.carouselImage img {
+  width: 100%;
+  height: 100%;
+}
+.horizontal-scroll-wrapper > div {
+  width: 300px;
+  height: 300px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+.horizontal-scroll-wrapper {
+  width: 300px;
+  height: 1800px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform: rotate(-90deg) translateY(-300px);
+}
+.horizontal-scroll-wrapper ::-webkit-scrollbar {
+  width: 0px;
+}
+.horizontal-scroll-wrapper::-webkit-scrollbar {
+  width: 0px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);  */
+  border-radius: 0px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);  */
+}
+/* Podcast page
+----------------*/
+
+div.podInfo {
+  width: 50%;
+  display: inline-block;
+  padding: 1% 2.5% 0 5%;
+  vertical-align: top;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+div.podInfo div {
+  display: inline-block;
+}
+div.podcastArtwork {
+  width: 20%;
+}
+div.podInfo > div > img {
+  width: 100%;
+}
+div.description {
+  width: 74%;
+  padding: 1% 2.5% 0 2.5%;
+  vertical-align: top;
+}
+
+div#target div {
+  width: 100%;
+  font-family: "Glacial Indifference";
+  font-size: 125%;
+}
+div.podEpisodes {
+  width: 40%;
+  padding-right: 2.5%;
+  display: inline-block;
+  margin-bottom: 150px;
+}
+div.episodeList {
+  font-size: 125%;
+}
+div.episode {
+  border: 1px solid #a6a6a6;
+}
+div.episode div:first-child {
+  width: 5%;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+}
+
+div.episode div:last-child {
+  border: 1px solid black;
+  width: 80%;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+}
+div.episodeList div {
+  padding: 2% 2.5% 1% 2.5%;
+}
+
+/*
+Side Menu
+*/
+
+div.sideMenu {
+  font-family: "Woodland Light";
+  font-size: 175%;
+  font-weight: 550;
+  line-height: 200%;
+  width: 400px;
+  display: inline-block;
+  height: 100vh;
+  left: -400px;
+  /* border: 50px; */
+  top: 0;
+  position: fixed;
+  background-color: #8fcbdb;
+}
+div.sideMenu hr {
+  border: 0.5px solid #050a30;
+  width: 80%;
+}
+div.menuItems {
+  padding: 5%;
+}
+div.sideMenu div {
+  padding: 7.5% 7.5% 0 7.5%;
+}
+div.sideMenu span {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  max-width: 100%;
+}
+.specialChar {
+  font-family: "Whirly Bats";
+}
+.specialChar:hover {
+  animation: animateFont 0.75s ease 0s infinite normal none running;
+}
+
+/* Side menu links
+------------------*/
+div.sideMenu a:hover {
+  text-shadow: #a6a6a6 2px 2px 2px;
+}
+@keyframes showSideMenu {
+  from {
+    left: -400px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-moz-keyframes showSideMenu {
+  from {
+    left: -400px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-webkit-keyframes showSideMenu {
+  from {
+    left: -400px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes hideSideMenu {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -400px;
+  }
+}
+@-moz-keyframes hideSideMenu {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -400px;
+  }
+}
+@-webkit-keyframes hideSideMenu {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -400px;
+  }
+}
+
+/*
+ * Forms
+ */
+div.inputForm {
+  font-size: 150%;
+  width: 100%;
+  text-align: center;
+  padding: 5% 0 0 0%;
+}
+
+div.inputForm form {
+  /* width: 40%; */
+  display: inline-block;
+}
+td {
+  padding: 2.5%;
+  text-align: center;
+}
+
+tr {
+  text-align: center;
+  width: 100%;
+}
+div.signinbtn {
+  text-align: center;
+  border: #050a30 1px solid;
+}
+input {
+  font-size: 75%;
+  font-family: "Glacial Indifference";
+}
+button.signinbtn {
+  font-size: 100%;
+  font-family: "Glacial Indifference";
+  border-radius: 5px;
+}
+p.signin {
+  padding: 1%;
+}
+p.signin a:hover {
+  text-decoration: underline;
+}
+p.signin a {
+  text-decoration: none;
+  color: #0292b7;
+}
+/* Episode Page
+------------------*/
+div.episodePage {
+  margin: 0 2.5% 0 2.5%;
+}
+div.episodeHeader {
+  /* height: 100px; */
+  padding: 0 5% 0 5%;
+  margin-bottom: 0;
+}
+div.episodePlayer {
+  width: 7%;
+  display: inline-block;
+}
+div.episodeArtwork {
+  width: 15%;
+  display: inline-block;
+  text-align: center;
+}
+div.episodetopics {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.5%;
+}
+div.episodeTitle {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+div.episodeArtwork img {
+  width: 100px;
+  vertical-align: middle;
+}
+
+div.episodeDescription {
+  display: inline-block;
+  width: 90%;
+  align-self: center;
+  margin: 0 2.5% 0 2.5%;
+}
+div.episodeDescription div.description {
+  padding-top: 0;
+  width: 100%;
+}
+div.chatBox {
+  padding: 1% 2.5% 0 2.5%;
+  width: 45%;
+  display: inline-block;
+}
+div.relatedPods {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 1% 2.5% 0 2.5%;
+}
+
+/* Submit Podcast form
+----------------------*/
+div.submitPodForm {
+  text-align: center;
+  font-size: 125%;
+  margin: 5%;
+}
+.submitPodForm textarea {
+  width: 40%;
+  height: 150px;
+  font-size: 140%;
+}
+.submitPodForm h2 {
+  font-size: 125%;
+  margin: 1%;
+}
+.submitPodForm button {
+  margin: 1%;
+}
+/* Scroll bar
+--------------*/
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d9d9d9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #050a30;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #050a30;
+}
+
+.errorMessage {
+  font-size: 90%;
+  background-color: #8fcbdb;
+}
+
+span.topic:hover {
+  cursor: pointer;
+}
+
+span.theme {
+  background-color: #e99581;
+  color: #4b3230;
+  border-radius: 4px;
+  padding: 0.25%;
+}
+
+span.person {
+  color: #380036;
+  background-color: #b2a3ec;
+  border-radius: 4px;
+  padding: 0.25%;
+}
+span.location {
+  background-color: #678d58;
+  color: #fdfee9;
+  border-radius: 4px;
+  padding: 0.25%;
+}
+.addTopic:hover {
+  cursor: pointer;
+}
+select,
+input#newTopic {
+  background-color: #d9d9d9;
+  color: #050a30;
+  font-family: "Glacial Indifference";
+  font-size: 110%;
+  border-radius: 5%;
+}
+input#newTopic {
+  border: 1px solid grey;
+}
+.newDiv {
+  display: none;
+}
+div.spinner {
+  text-align: center;
+  padding: 10%;
+}
+
+@keyframes animateFont {
+  0% {
+    font-variation-settings: "anim" 100;
+  }
+  10% {
+    font-variation-settings: "anim" 110;
+  }
+  20% {
+    font-variation-settings: "anim" 120;
+  }
+  30% {
+    font-variation-settings: "anim" 130;
+  }
+  40% {
+    font-variation-settings: "anim" 140;
+  }
+  50% {
+    font-variation-settings: "anim" 150;
+  }
+  60% {
+    font-variation-settings: "anim" 160;
+  }
+  70% {
+    font-variation-settings: "anim" 170;
+  }
+  80% {
+    font-variation-settings: "anim" 180;
+  }
+  90% {
+    font-variation-settings: "anim" 190;
+  }
+  100% {
+    font-variation-settings: "anim" 200;
+  }
+}
+@-moz-keyframes animateFont {
+  0% {
+    font-variation-settings: "anim" 100;
+  }
+  10% {
+    font-variation-settings: "anim" 110;
+  }
+  20% {
+    font-variation-settings: "anim" 120;
+  }
+  30% {
+    font-variation-settings: "anim" 130;
+  }
+  40% {
+    font-variation-settings: "anim" 140;
+  }
+  50% {
+    font-variation-settings: "anim" 150;
+  }
+  60% {
+    font-variation-settings: "anim" 160;
+  }
+  70% {
+    font-variation-settings: "anim" 170;
+  }
+  80% {
+    font-variation-settings: "anim" 180;
+  }
+  90% {
+    font-variation-settings: "anim" 190;
+  }
+  100% {
+    font-variation-settings: "anim" 200;
+  }
+}
+@-webkit-keyframes animateFont {
+  0% {
+    font-variation-settings: "anim" 100;
+  }
+  10% {
+    font-variation-settings: "anim" 110;
+  }
+  20% {
+    font-variation-settings: "anim" 120;
+  }
+  30% {
+    font-variation-settings: "anim" 130;
+  }
+  40% {
+    font-variation-settings: "anim" 140;
+  }
+  50% {
+    font-variation-settings: "anim" 150;
+  }
+  60% {
+    font-variation-settings: "anim" 160;
+  }
+  70% {
+    font-variation-settings: "anim" 170;
+  }
+  80% {
+    font-variation-settings: "anim" 180;
+  }
+  90% {
+    font-variation-settings: "anim" 190;
+  }
+  100% {
+    font-variation-settings: "anim" 200;
+  }
+}
+
+/* Mobile Responsiveness
+-------------------------*/
+
+@media (max-width: 1150px) {
+  .menuBar h3 {
+    width: 30%;
+    text-align: center;
+    margin: 1%;
+    padding: 2% 0% 1% 0%;
+    /* border: 1px solid#0292b7; */
+    background-color: #89ddf1;
+    border-radius: 6px;
+    font-size: 90%;
+  }
+  h3.editorschoicelink {
+    text-emphasis: center;
+  }
+  h3.bloglink {
+    text-align: center;
+  }
+  div.carouselImage {
+    width: 20%;
+  }
+  /* Episode Page
+------------------*/
+  div.episodePage {
+    margin: 0 2.5% 0 2.5%;
+  }
+
+  div.episodeArtwork {
+    width: 30%;
+  }
+
+  div.episodeTitle {
+    width: 60%;
+    font-size: 80%;
+  }
+  div.episodeDescription {
+    width: 90%;
+  }
+
+  div.chatBox {
+    width: 60%;
+  }
+  div.relatedPods {
+    width: 30%;
+  }
+  div.episodeTopics {
+    width: 95%;
+    padding: 0.5%;
+  }
+}
+@media (max-width: 1000px) {
+  div.podInfo {
+    width: 100%;
+    position: relative;
+  }
+  div.podEpisodes {
+    width: 95%;
+    padding: 2.5%;
+  }
+  div.episode {
+    border: 0;
+    border-bottom: 1px solid #a6a6a6;
+  }
+  div.header {
+    vertical-align: middle;
+  }
+  div.siteIcon {
+    vertical-align: middle;
+  }
+  div.siteTtl {
+    font-size: 125%;
+  }
+  div.accountIcons div {
+    width: 30px;
+    vertical-align: middle;
+    padding-top: 10px;
+  }
+  .submitPodForm textarea {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  div.carouselImage {
+    width: 28%;
+  }
+  div.icon > svg {
+    width: 25px;
+  }
+
+  div.controls {
+    text-align: center;
+  }
+  div.controls div {
+    padding-top: 12px;
+  }
+
+  div.controls div.icon {
+    width: 15%;
+  }
+  div.controls svg {
+    width: 35px;
+  }
+  /* The pod info
+  ----------------*/
+  div.podInfo div {
+    display: inline-block;
+  }
+  div.podInfo {
+    width: 95%;
+    padding: 2.5%;
+  }
+
+  div.podcastArtwork {
+    width: 100%;
+  }
+  .podcastArtwork img {
+    width: 100%;
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+  div.description {
+    width: 95%;
+    padding: 1% 2.5% 0 2.5%;
+    vertical-align: top;
+    /* position: absolute; */
+  }
+  div.spinner {
+    text-align: center;
+    padding-top: 40%;
+  }
+  div.spinner img {
+    width: 30%;
+  }
+  div.chatBox {
+    width: 95%;
+    padding: 0 2.5% 0 2.5%;
+  }
+  div.relatedPods {
+    width: 95%;
+  }
+}
