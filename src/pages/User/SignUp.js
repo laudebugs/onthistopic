@@ -11,7 +11,10 @@ const SignUp = () => {
 
       <div className="inputForm">
         <div>
-          <form action="/api/signup" method="POST">
+          <form
+            action="https://api.onthistopic.tamaduni.org/signup"
+            method="POST"
+          >
             <table>
               <tr>
                 <td>

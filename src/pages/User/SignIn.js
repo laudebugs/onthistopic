@@ -37,7 +37,10 @@ const SignIn = () => {
       <Header />
       <div className="inputForm">
         <div>
-          <form action="/api/signin" method="POST">
+          <form
+            action="https://api.onthistopic.tamaduni.org/signin"
+            method="POST"
+          >
             <table>
               {errorMessage}
               <tr>

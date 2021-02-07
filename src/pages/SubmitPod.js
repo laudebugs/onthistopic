@@ -25,7 +25,10 @@ const SubmitPod = () => {
       },
     };
     if (feedUrl !== "") {
-      let response = await fetch("/api/podcast", options);
+      let response = await fetch(
+        "https://api.onthistopic.tamaduni.org/podcast",
+        options
+      );
       response = await response.json();
       console.log(response);
       setSubmitted(response.saved);
