@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import Menu from "./icons/Menu";
 import $ from "jquery";
+import endpoint from "../api/endpoint";
 
 import { connect } from "react-redux";
 import { getStatus } from "../components/thunks";
@@ -30,7 +31,7 @@ const Header = ({ user, beginStatusUpdate }) => {
       <p>
         <span
           onClick={async () => {
-            await fetch("/api/signout", options);
+            await fetch(`${endpoint}/signout`, options);
             beginStatusUpdate();
             <Redirect to="/" />;
           }}

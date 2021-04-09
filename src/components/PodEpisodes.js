@@ -14,6 +14,7 @@ export default function Podcast({ episodes }) {
     eps = episodes;
   }, []);
   function printEpisodes() {
+    console.log(eps);
     return eps.map((episode) => (
       <div className="episode">
         <EpisodePlayer episode={episode} />
@@ -22,7 +23,7 @@ export default function Podcast({ episodes }) {
             <h4>{episode.title}</h4>
           </Link>
           <p>
-            {episode.datePublished.substring(0, 16)} |{" "}
+            {new Date(episode.datePublished).toDateString()} |{" "}
             {HelperFuncs.toHrsMins(episode.duration)}
           </p>
         </div>

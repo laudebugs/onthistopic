@@ -1,24 +1,49 @@
 import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
+import $ from "jquery";
 
 import Header from "../../components/Header";
 
+import endpoint from "../../api/endpoint";
+
 const SignUp = () => {
+  const submit = async (e) => {
+    e.preventDefault();
+    const options = {
+      method: "POST",
+      body: JSON.stringify({
+        firstname: $("#firstname")[0].value,
+        lastname: $("#lastname")[0].value,
+        username: $("#username")[0].value,
+        email: $("#email")[0].value,
+        password: $("#password")[0].value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    // console.log(options);
+    const request = fetch(`${endpoint}/signup`, options);
+    request.then((response) => {
+      response.json().then((result) => {
+        if (result.errors.length === 0) {
+          console.log(result);
+        }
+      });
+    });
+  };
   return (
     <>
       <Header />
 
       <div className="inputForm">
         <div>
-          <form
-            action="https://api.onthistopic.tamaduni.org/signup"
-            method="POST"
-          >
+          <form method="POST">
             <table>
               <tr>
                 <td>
-                  <label for="username">First Name</label>
+                  <label for="firstname">First Name</label>
                 </td>
                 <td>
                   <input type="text" name="firsname" id="firstname"></input>
@@ -26,7 +51,7 @@ const SignUp = () => {
               </tr>
               <tr>
                 <td>
-                  <label for="username">Last Name</label>
+                  <label for="lastname">Last Name</label>
                 </td>
                 <td>
                   <input type="text" name="lastname" id="lastname"></input>
@@ -38,7 +63,7 @@ const SignUp = () => {
                 </td>
                 <td>
                   <input
-                    type="text"
+                    type="username"
                     name="username"
                     id="username"
                     required={true}
@@ -82,7 +107,7 @@ const SignUp = () => {
               </tr>
               <tr>
                 <td colspan="2">
-                  <button class="signinbtn" type="submit">
+                  <button class="signinbtn" onClick={submit} type="submit">
                     Sign up
                   </button>
                 </td>

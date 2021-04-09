@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { getPlayer, getEpisode } from "./selectors";
+import endpoint from "../api/endpoint";
 import User from "../components/icons/User";
 
 import $ from "jquery";
@@ -65,7 +66,7 @@ Use #word# for a topic, *word* for a person and ^word^ for location. Use @ to me
              * No spam :)
              */
             if (comment !== "") {
-              await fetch("/api/episode/addcomment", options);
+              await fetch(`${endpoint}/episode/addcomment`, options);
             }
             $("#comment")[0].value = "";
           }}

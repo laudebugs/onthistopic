@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-
+import endpoint from "../../api/endpoint";
 import { getPlayer } from "../selectors";
 const mapStateToProps = (state) => ({
   player: getPlayer(state),
@@ -8,7 +8,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   // onPlayPause: () => dispatch(playPause()),
 });
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps
@@ -19,7 +18,7 @@ export default connect(
   const [saved, setSaved] = useState();
   async function getLike() {
     let request = await fetch(
-      `/api/like/episode/${player.playing.episode._id}`
+      `${endpoint}/like/episode/${player.playing.episode._id}`
     );
     let status = await request.json();
     setLiked(status.liked);
@@ -42,7 +41,7 @@ export default connect(
             "Content-Type": "application/json",
           },
         };
-        let res = await fetch(`/api/like/episode`, options);
+        let res = await fetch(`${endpoint}/like/episode`, options);
         let isLiked = await res.json();
         console.log(isLiked);
         setLiked(isLiked.liked);

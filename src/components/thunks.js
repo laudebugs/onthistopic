@@ -23,10 +23,7 @@ import {
 } from "./actions";
 import $ from "jquery";
 
-const prod = "https://api.onthistopic.tamaduni.org";
-const dev = "http://localhost:5000";
-
-const endpoint = prod;
+import endpoint from "../api/endpoint";
 
 export const loadPodcasts = () => async (dispatch, getState) => {
   try {
